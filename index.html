@@ -1,9 +1,39 @@
-<!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="refresh" content="5; url=https://www.google.com">
+    
+    <title>Redirecting to Wedding Photos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            background-color: #f9f9f9;
+        }
+        .loader {
+            color: #555;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Thanks for celebrating with us!</h1>
+    <p>We are redirecting you to our photo gallery in 5 seconds...</p>
+    
+    <p class="loader">If nothing happens, <a href="https://www.google.com">click here</a>.</p>
+
+    <script>
+        // Optional: A second layer of redirection using JavaScript 
+        // to ensure it works even if the meta tag is ignored.
+        setTimeout(function() {
+            window.location.href = "https://www.google.com";
+        }, 5000); // 5000 milliseconds = 5 seconds
+    </script>
+
+</body>
 </html>
