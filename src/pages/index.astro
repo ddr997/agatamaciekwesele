@@ -1,7 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -13,38 +12,100 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section id="dojazd">
+				<h2>Kościół i sala</h2>
+				<p class="venue">
+					Ślub odbędzie się w <b> Kościele pw. św. Stanisława Biskupa i Męczennika w Rzgowie</b> <br>
+					<a href="https://maps.app.goo.gl/JDEQHt8ndkDJzqV86" target="_blank" rel="noopener">plac 500-lecia 7, 95-030 Rzgów</a>
+				</p>
+				<p class="venue">
+					Wesele będzie miało miejsce w sali restauracji <b> Eden Hotel i Restauracja </b> <br>
+					<a href="https://maps.app.goo.gl/qbXYjmw8guHNjPAKA" target="_blank" rel="noopener">ul. Letniskowa 11/13, 95-030 Rzgów</a>.
+					<br> Jest to pierwszy budynek po wjeździe za bramę kompleksu.
+				</p>
+				<p></p>
+				<a href="https://maps.app.goo.gl/vPmQJ3B6mfPu1Jsm8" target="_blank" rel="noopener">
+					<img class="mapa" src={`${import.meta.env.BASE_URL}/MAPA.png`} alt="Mapa dojazdu na wesele" />
+				</a>
+			</section>
+
+			<section id="nocleg">
+				<h2>Nocleg dla gości przyjezdnych</h2>
+				<p>
+					Dla każdej pary gości przyjezdnych zarezerwowaliśmy pokój w hotelu.
+					Budynek hotelu znajduje się za salą weselną wewnątrz kompleksu.
+					W recepcji wystarczy powiedzieć, że jest się naszym gościem weselnym.
+				</p>
+				<img class="hotel" src={`${import.meta.env.BASE_URL}/HOTEL.png`} alt="Hotel" />
+			</section>
+
+			<section id="zdjecia">
+				<h2>Zdjęcia</h2>
+				<p>Źródło do zdjęć z wesela udostępnimy tutaj.</p>
+				<img class="tomy" src={`${import.meta.env.BASE_URL}/tomy.jpeg`} alt="Zdjęcia z wesela" />
+			</section>
+
+			<section id="kontakt">
+				<h2>Kontakt</h2>
+				<p class="venue">
+					W razie kontaktu możecie się kontaktować bezpośrednio z nami lub ze świadkami:
+				</p>
+				<p class="venue">
+					Agata: <a href="tel:+48668287198">+48 668 287 198</a>
+				</p>
+				<p class="venue">
+					Maciek: <a href="tel:+48668287199">+48 668 287 199</a>
+				</p>
+				<p class="venue">
+					Julia: <a href="tel:+48000000000">+48 000 000 000</a>
+				</p>
+				<p class="venue">
+					Hubert: <a href="tel:+48000000000">+48 000 000 000</a>
+				</p>
+			</section>
 		</main>
-		<Footer />
 	</body>
 </html>
+
+<style>
+	.mapa {
+		max-width: 72%;
+		border-radius: 8px;
+		box-shadow: var(--box-shadow);
+		transition: transform 0.2s ease;
+	}
+	.hotel {
+		max-width: 40%;
+		border-radius: 8px;
+		box-shadow: var(--box-shadow);
+	}
+	.tomy {
+		max-width: 40%;
+		border-radius: 8px;
+		box-shadow: var(--box-shadow);
+	}
+	@media (max-width: 720px) {
+		.hotel {
+			max-width: 100%;
+		}
+	}
+	.venue {
+		margin-bottom: 1.5em;
+	}
+	.venue a {
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		font-weight: 700;
+	}
+	.venue a:hover {
+		color: var(--accent-dark);
+	}
+	.mapa:hover {
+		transform: scale(1.02);
+	}
+	@media (max-width: 720px) {
+		.mapa {
+			max-width: 100%;
+		}
+	}
+</style>
