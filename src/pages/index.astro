@@ -5,107 +5,286 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="pl">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
+
 		<main>
-			<section id="dojazd">
-				<h2>Kościół i sala</h2>
-				<p class="venue">
-					Ślub odbędzie się w <b> Kościele pw. św. Stanisława Biskupa i Męczennika w Rzgowie</b> <br>
-					<a href="https://maps.app.goo.gl/JDEQHt8ndkDJzqV86" target="_blank" rel="noopener">plac 500-lecia 7, 95-030 Rzgów</a>
-				</p>
-				<p class="venue">
-					Wesele będzie miało miejsce w sali restauracji <b> Eden Hotel i Restauracja </b> <br>
-					<a href="https://maps.app.goo.gl/qbXYjmw8guHNjPAKA" target="_blank" rel="noopener">ul. Letniskowa 11/13, 95-030 Rzgów</a>.
-					<br> Jest to pierwszy budynek po wjeździe za bramę kompleksu.
-				</p>
-				<p></p>
-				<a href="https://maps.app.goo.gl/vPmQJ3B6mfPu1Jsm8" target="_blank" rel="noopener">
-					<img class="mapa" src={`${import.meta.env.BASE_URL}/MAPA.png`} alt="Mapa dojazdu na wesele" />
-				</a>
+			<section class="flex items-center justify-center min-h-screen pt-14 pb-16 px-6 text-center">
+				<div class="max-w-xl hero-content">
+					<p class="font-serif italic text-lg text-muted mb-3 tracking-[0.04em] hero-line">
+						Zapraszamy na ślub
+					</p>
+					<h1 class="font-serif text-[clamp(3rem,10vw,6.5rem)] font-normal text-ink leading-none tracking-[0.03em] mb-4 hero-line">
+						Agata <span class="italic text-brand">&amp;</span> Maciek
+					</h1>
+					<p class="text-[0.95em] text-muted leading-relaxed max-w-md mx-auto mb-8 font-light hero-line">
+						Z nieukrywaną radością zapraszamy Was do wspólnego świętowania.
+						Będzie skromnie, rodzinnie i z humorem — dokładnie tak, jak lubimy.
+					</p>
+					<div class="font-serif text-2xl font-medium text-ink tracking-[0.1em] uppercase hero-line">
+						<span>piątek</span>
+						<span class="text-brand mx-2">·</span>
+						<span>28</span>
+						<span class="text-brand mx-2">·</span>
+						<span>08</span>
+						<span class="text-brand mx-2">·</span>
+						<span>2026</span>
+					</div>
+					<p class="text-sm text-muted mt-3 tracking-[0.06em] hero-line">Rzgów</p>
+				</div>
 			</section>
 
-			<section id="nocleg">
-				<h2>Nocleg dla gości przyjezdnych</h2>
-				<p>
-					Dla każdej pary gości przyjezdnych zarezerwowaliśmy pokój w hotelu.
-					Budynek hotelu znajduje się za salą weselną wewnątrz kompleksu.
-					W recepcji wystarczy powiedzieć, że jest się naszym gościem weselnym.
-				</p>
-				<img class="hotel" src={`${import.meta.env.BASE_URL}/HOTEL.png`} alt="Hotel" />
+			<section id="plan" class="py-20 px-6">
+				<div class="max-w-2xl mx-auto">
+					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2 reveal">Harmonogram</p>
+					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-10 reveal">
+						Plan dnia
+					</h2>
+
+					<div class="flex flex-col gap-6">
+						<article class="flex gap-6 bg-card border border-border rounded-2xl p-7 transition-colors duration-200 hover:border-brand reveal">
+							<span class="font-serif text-[2.2rem] font-light text-brand leading-none shrink-0">01</span>
+							<div class="min-w-0">
+								<p class="text-[0.7rem] font-normal tracking-[0.15em] uppercase text-brand mb-1">Ceremonia</p>
+								<h3 class="font-serif text-2xl font-medium text-ink tracking-[0.04em] mb-2">Ślub</h3>
+								<p class="text-sm text-muted leading-relaxed mb-2">
+									Zapraszamy do wspólnego przeżycia najważniejszego momentu dnia —
+									przysięgi małżeńskiej w kościele pw. św. Stanisława Biskupa i Męczennika.
+								</p>
+								<p class="text-[0.85rem] text-muted mb-3">plac 500-lecia 7, 95-030 Rzgów</p>
+								<a
+									href="https://maps.app.goo.gl/JDEQHt8ndkDJzqV86"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="inline-block text-[0.7rem] font-medium tracking-[0.1em] uppercase no-underline text-brand-dark border border-border rounded-full px-5 py-1.5 transition-all duration-200 hover:bg-brand-dark hover:text-white hover:border-brand-dark"
+								>
+									pokaż na mapie
+								</a>
+							</div>
+						</article>
+
+						<article class="flex gap-6 bg-card border border-border rounded-2xl p-7 transition-colors duration-200 hover:border-brand reveal">
+							<span class="font-serif text-[2.2rem] font-light text-brand leading-none shrink-0">02</span>
+							<div class="min-w-0">
+								<p class="text-[0.7rem] font-normal tracking-[0.15em] uppercase text-brand mb-1">Przyjęcie</p>
+								<h3 class="font-serif text-2xl font-medium text-ink tracking-[0.04em] mb-2">Wesele</h3>
+								<p class="text-sm text-muted leading-relaxed mb-2">
+									Po ceremonii zapraszamy na przyjęcie weselne do restauracji
+									Eden Hotel i Restauracja. Pierwszy budynek po wjeździe za bramę kompleksu.
+								</p>
+								<p class="text-[0.85rem] text-muted mb-3">ul. Letniskowa 11/13, 95-030 Rzgów</p>
+								<a
+									href="https://maps.app.goo.gl/qbXYjmw8guHNjPAKA"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="inline-block text-[0.7rem] font-medium tracking-[0.1em] uppercase no-underline text-brand-dark border border-border rounded-full px-5 py-1.5 transition-all duration-200 hover:bg-brand-dark hover:text-white hover:border-brand-dark"
+								>
+									pokaż na mapie
+								</a>
+							</div>
+						</article>
+					</div>
+				</div>
 			</section>
 
-			<section id="zdjecia">
-				<h2>Zdjęcia</h2>
-				<p>Źródło do zdjęć z wesela udostępnimy tutaj.</p>
-				<img class="tomy" src={`${import.meta.env.BASE_URL}/tomy.jpeg`} alt="Zdjęcia z wesela" />
+			<section id="miejsca" class="py-20 px-6">
+				<div class="max-w-2xl mx-auto reveal">
+					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-8">
+						Jak dojechać
+					</h2>
+					<figure class="m-0">
+						<a href="https://maps.app.goo.gl/vPmQJ3B6mfPu1Jsm8" target="_blank" rel="noopener noreferrer" class="block">
+							<img
+								class="w-full rounded-2xl shadow-sm transition-transform duration-300 hover:scale-[1.01]"
+								src={`${import.meta.env.BASE_URL}/MAPA.png`}
+								alt="Mapa dojazdu na wesele"
+							/>
+						</a>
+						<figcaption class="mt-2 text-xs text-muted italic text-center">
+							Kliknij, aby otworzyć trasę w Mapach Google
+						</figcaption>
+					</figure>
+				</div>
 			</section>
 
-			<section id="kontakt">
-				<h2>Kontakt</h2>
-				<p class="venue">
-					W razie kontaktu możecie się kontaktować bezpośrednio z nami lub ze świadkami:
-				</p>
-				<p class="venue">
-					Agata: <a href="tel:+48668287198">+48 668 287 198</a>
-				</p>
-				<p class="venue">
-					Maciek: <a href="tel:+48668287199">+48 668 287 199</a>
-				</p>
-				<p class="venue">
-					Julia: <a href="tel:+48000000000">+48 000 000 000</a>
-				</p>
-				<p class="venue">
-					Hubert: <a href="tel:+48000000000">+48 000 000 000</a>
-				</p>
+			<section id="nocleg" class="py-20 px-6">
+				<div class="max-w-2xl mx-auto">
+					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2 reveal">Nocleg</p>
+					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-10 reveal">
+						Pokój dla gości
+					</h2>
+					<div class="flex items-center gap-10 max-md:flex-col max-md:gap-6 reveal">
+						<div class="flex-1">
+							<p class="text-[0.95rem] text-muted leading-relaxed">
+								Dla każdej pary gości przyjezdnych zarezerwowaliśmy pokój w hotelu.
+								Budynek hotelu znajduje się za salą weselną wewnątrz kompleksu.
+								W recepcji wystarczy powiedzieć, że jest się naszym gościem weselnym.
+							</p>
+						</div>
+						<img
+							class="w-[42%] max-md:w-full rounded-2xl shadow-sm"
+							src={`${import.meta.env.BASE_URL}/HOTEL.png`}
+							alt="Hotel"
+						/>
+					</div>
+				</div>
 			</section>
+
+			<section id="galeria" class="py-20 px-6">
+				<div class="max-w-2xl mx-auto">
+					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2 reveal">Galeria</p>
+					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-6 reveal">
+						Zdjęcia
+					</h2>
+					<p class="text-[0.95rem] text-muted mb-8 reveal">Źródło do zdjęć z wesela udostępnimy tutaj.</p>
+					<div class="reveal">
+						<img
+							class="w-full rounded-2xl shadow-sm"
+							src={`${import.meta.env.BASE_URL}/tomy.jpeg`}
+							alt="Zdjęcia z wesela"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<section id="kontakt" class="py-20 px-6">
+				<div class="max-w-2xl mx-auto">
+					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2 reveal">Kontakt</p>
+					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-6 reveal">
+						Masz pytania?
+					</h2>
+					<p class="text-[0.95rem] text-muted mb-10 reveal">
+						W razie czegokolwiek — dzwońcie śmiało do nas lub do świadków.
+					</p>
+					<div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4">
+						<a href="tel:+48668287198" class="flex flex-col items-center gap-0.5 bg-card border border-border rounded-2xl p-6 no-underline text-ink transition-all duration-200 hover:border-brand hover:-translate-y-1 reveal">
+							<span class="font-serif text-2xl font-medium tracking-[0.04em]">Agata</span>
+							<span class="text-[0.65rem] font-normal tracking-[0.14em] uppercase text-brand mb-2">Panna młoda</span>
+							<span class="text-sm text-muted">+48 668 287 198</span>
+						</a>
+						<a href="tel:+48668287199" class="flex flex-col items-center gap-0.5 bg-card border border-border rounded-2xl p-6 no-underline text-ink transition-all duration-200 hover:border-brand hover:-translate-y-1 reveal">
+							<span class="font-serif text-2xl font-medium tracking-[0.04em]">Maciek</span>
+							<span class="text-[0.65rem] font-normal tracking-[0.14em] uppercase text-brand mb-2">Pan młody</span>
+							<span class="text-sm text-muted">+48 668 287 199</span>
+						</a>
+						<a href="tel:+48000000000" class="flex flex-col items-center gap-0.5 bg-card border border-border rounded-2xl p-6 no-underline text-ink transition-all duration-200 hover:border-brand hover:-translate-y-1 reveal">
+							<span class="font-serif text-2xl font-medium tracking-[0.04em]">Julia</span>
+							<span class="text-[0.65rem] font-normal tracking-[0.14em] uppercase text-brand mb-2">Świadkowa</span>
+							<span class="text-sm text-muted">+48 000 000 000</span>
+						</a>
+						<a href="tel:+48000000000" class="flex flex-col items-center gap-0.5 bg-card border border-border rounded-2xl p-6 no-underline text-ink transition-all duration-200 hover:border-brand hover:-translate-y-1 reveal">
+							<span class="font-serif text-2xl font-medium tracking-[0.04em]">Hubert</span>
+							<span class="text-[0.65rem] font-normal tracking-[0.14em] uppercase text-brand mb-2">Świadek</span>
+							<span class="text-sm text-muted">+48 000 000 000</span>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="py-20 px-6 text-center border-t border-border-light">
+				<div class="max-w-xl mx-auto reveal">
+					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2">Odliczanie</p>
+					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-8">
+						Do zobaczenia już za
+					</h2>
+					<div class="flex justify-center flex-wrap gap-x-8 gap-y-5 mb-6" id="countdown">
+						<div class="flex flex-col items-center min-w-[64px]">
+							<span class="font-serif text-[2.6rem] font-light text-brand leading-none" id="days">--</span>
+							<span class="text-[0.65rem] tracking-[0.14em] uppercase text-muted mt-1">dni</span>
+						</div>
+						<div class="flex flex-col items-center min-w-[64px]">
+							<span class="font-serif text-[2.6rem] font-light text-brand leading-none" id="hours">--</span>
+							<span class="text-[0.65rem] tracking-[0.14em] uppercase text-muted mt-1">godzin</span>
+						</div>
+						<div class="flex flex-col items-center min-w-[64px]">
+							<span class="font-serif text-[2.6rem] font-light text-brand leading-none" id="minutes">--</span>
+							<span class="text-[0.65rem] tracking-[0.14em] uppercase text-muted mt-1">minut</span>
+						</div>
+						<div class="flex flex-col items-center min-w-[64px]">
+							<span class="font-serif text-[2.6rem] font-light text-brand leading-none" id="seconds">--</span>
+							<span class="text-[0.65rem] tracking-[0.14em] uppercase text-muted mt-1">sekund</span>
+						</div>
+					</div>
+					<p class="text-sm text-muted tracking-[0.06em]">Rzgów</p>
+				</div>
+			</section>
+
+			<footer class="text-center py-12 px-6 border-t border-border-light font-serif text-base text-muted tracking-[0.05em] reveal">
+				<p>Agata &amp; Maciek · 28.08.2026</p>
+			</footer>
 		</main>
 	</body>
 </html>
 
-<style>
-	.mapa {
-		max-width: 72%;
-		border-radius: 8px;
-		box-shadow: var(--box-shadow);
-		transition: transform 0.2s ease;
-	}
-	.hotel {
-		max-width: 40%;
-		border-radius: 8px;
-		box-shadow: var(--box-shadow);
-	}
-	.tomy {
-		max-width: 40%;
-		border-radius: 8px;
-		box-shadow: var(--box-shadow);
-	}
-	@media (max-width: 720px) {
-		.hotel {
-			max-width: 100%;
-		}
-	}
-	.venue {
-		margin-bottom: 1.5em;
-	}
-	.venue a {
-		text-decoration: underline;
-		text-underline-offset: 3px;
-		font-weight: 700;
-	}
-	.venue a:hover {
-		color: var(--accent-dark);
-	}
-	.mapa:hover {
-		transform: scale(1.02);
-	}
-	@media (max-width: 720px) {
-		.mapa {
-			max-width: 100%;
-		}
+<style is:global>
+	.reveal {
+		opacity: 0;
+		transform: translateY(30px);
 	}
 </style>
+
+<script>
+	import gsap from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	gsap.fromTo(
+		".hero-line",
+		{ opacity: 0, y: 40 },
+		{
+			opacity: 1,
+			y: 0,
+			duration: 0.9,
+			stagger: 0.15,
+			ease: "power3.out",
+			delay: 0.4,
+		}
+	);
+
+	ScrollTrigger.batch(".reveal", {
+		onEnter: (els) => {
+			gsap.to(els, {
+				opacity: 1,
+				y: 0,
+				duration: 0.8,
+				stagger: 0.08,
+				ease: "power3.out",
+			});
+		},
+		start: "top 88%",
+		once: true,
+	});
+
+	const target = new Date("2026-08-28T00:00:00+02:00").getTime();
+
+	function updateCountdown() {
+		const now = Date.now();
+		const diff = target - now;
+
+		if (diff <= 0) {
+			["days", "hours", "minutes", "seconds"].forEach((id) => {
+				const el = document.getElementById(id);
+				if (el) el.textContent = "00";
+			});
+			return;
+		}
+
+		const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+		const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+		const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+		document.getElementById("days").textContent = String(days).padStart(2, "0");
+		document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+		document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+		document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+	}
+
+	updateCountdown();
+	setInterval(updateCountdown, 1000);
+</script>

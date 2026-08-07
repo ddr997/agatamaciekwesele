@@ -1,68 +1,9 @@
----
-import { SITE_TITLE } from '../consts';
----
-
-<header>
-	<h1 class="site-title">{SITE_TITLE}</h1>
-	<p class="wedding-date">piątek 28.08.2026</p>
-	<nav>
-		<div class="internal-links">
-			<a href="#dojazd">Kościół i sala weselna</a>
-			<a href="#sala-weselna">Dojazd i parking</a>
-			<a href="#nocleg">Nocleg dla gości</a>
-			<a href="#zdjecia">Zdjęcia</a>
-			<a href="#kontakt">Kontakt</a>
-		</div>
+<header class="fixed top-0 inset-x-0 z-50 bg-cream/75 backdrop-blur-md border-b border-border-light">
+	<nav class="flex justify-center flex-wrap gap-1 py-3 px-6">
+		<a href="#plan" class="px-4 py-1.5 text-xs tracking-[0.12em] uppercase text-muted no-underline rounded-full hover:text-brand-dark hover:bg-card transition-colors duration-200">Plan dnia</a>
+		<a href="#miejsca" class="px-4 py-1.5 text-xs tracking-[0.12em] uppercase text-muted no-underline rounded-full hover:text-brand-dark hover:bg-card transition-colors duration-200">Miejsca</a>
+		<a href="#nocleg" class="px-4 py-1.5 text-xs tracking-[0.12em] uppercase text-muted no-underline rounded-full hover:text-brand-dark hover:bg-card transition-colors duration-200">Nocleg</a>
+		<a href="#galeria" class="px-4 py-1.5 text-xs tracking-[0.12em] uppercase text-muted no-underline rounded-full hover:text-brand-dark hover:bg-card transition-colors duration-200">Galeria</a>
+		<a href="#kontakt" class="px-4 py-1.5 text-xs tracking-[0.12em] uppercase text-muted no-underline rounded-full hover:text-brand-dark hover:bg-card transition-colors duration-200">Kontakt</a>
 	</nav>
 </header>
-<style>
-	@import url('https://fonts.googleapis.com/css2?family=Ballet&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap');
-
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-		text-align: center;
-	}
-	.site-title {
-		margin: 0;
-		font-size: 3em;
-		padding: 0.8em 0.5em 0.2em;
-		font-family: 'Ballet', cursive;
-		color: rgb(var(--black));
-		letter-spacing: 0.5px;
-		font-weight: 400;
-	}
-
-	.wedding-date {
-		margin: 0 0 1em;
-		font-family: 'Cormorant Garamond', serif;
-		font-size: 1.3em;
-		letter-spacing: 1px;
-		color: rgb(var(--gray-dark));
-	}
-
-	nav {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-	.internal-links {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-	nav a {
-		padding: 0.5em 0.75em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-		font-size: 0.85em;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-</style>
