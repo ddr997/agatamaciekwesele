@@ -14,7 +14,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 		<main>
 			<section
-				class="relative flex items-center justify-center min-h-screen pt-14 pb-16 px-6 text-center bg-cover bg-center"
+				class="relative flex items-center justify-center min-h-screen pt-14 pb-16 px-6 text-center bg-cover bg-center bg-no-repeat hero-banner"
 				style={`background-image: url(${import.meta.env.BASE_URL}/baner.jpg)`}
 			>
 				<div class="absolute inset-0"></div>
@@ -250,6 +250,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	.reveal {
 		opacity: 0;
 		transform: translateY(30px);
+	}
+	@media (max-width: 720px) {
+		.hero-banner {
+			background-size: contain;
+		}
 	}
 </style>
 
