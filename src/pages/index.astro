@@ -13,17 +13,20 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 
 		<main>
-			<section class="flex items-center justify-center min-h-screen pt-14 pb-16 px-6 text-center">
-				<div class="max-w-xl hero-content">
-					<p class="font-serif italic text-lg text-muted mb-3 tracking-[0.04em] hero-line">
-						Zapraszamy na ślub
+			<section
+				class="relative flex items-center justify-center min-h-screen pt-14 pb-16 px-6 text-center bg-cover bg-center"
+				style={`background-image: url(${import.meta.env.BASE_URL}/baner.jpg)`}
+			>
+				<div class="absolute inset-0"></div>
+				<div class="max-w-xl hero-content relative">
+					<p class="font-serif italic text-lg text-ink/80 mb-3 tracking-[0.04em] hero-line">
+						Pobieramy Się!
 					</p>
 					<h1 class="font-serif text-[clamp(3rem,10vw,6.5rem)] font-normal text-ink leading-none tracking-[0.03em] mb-4 hero-line">
 						Agata <span class="italic text-brand">&amp;</span> Maciek
 					</h1>
-					<p class="text-[0.95em] text-muted leading-relaxed max-w-md mx-auto mb-8 font-light hero-line">
-						Z nieukrywaną radością zapraszamy Was do wspólnego świętowania.
-						Będzie skromnie, rodzinnie i z humorem — dokładnie tak, jak lubimy.
+					<p class="text-[0.95em] text-ink/80 leading-relaxed max-w-md mx-auto mb-8 font-light hero-line">
+					Z ogromną radością zapraszamy na nasz ślub
 					</p>
 					<div class="font-serif text-2xl font-medium text-ink tracking-[0.1em] uppercase hero-line">
 						<span>piątek</span>
@@ -40,9 +43,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 			<section id="plan" class="py-20 px-6">
 				<div class="max-w-2xl mx-auto">
-					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2 reveal">Harmonogram</p>
+					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2 reveal"></p>
 					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-10 reveal">
-						Plan dnia
+						Harmonogram Dnia Ślubu
 					</h2>
 
 					<div class="flex flex-col gap-6">
@@ -52,10 +55,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 								<p class="text-[0.7rem] font-normal tracking-[0.15em] uppercase text-brand mb-1">Ceremonia</p>
 								<h3 class="font-serif text-2xl font-medium text-ink tracking-[0.04em] mb-2">Ślub</h3>
 								<p class="text-sm text-muted leading-relaxed mb-2">
-									Zapraszamy do wspólnego przeżycia najważniejszego momentu dnia —
-									przysięgi małżeńskiej w kościele pw. św. Stanisława Biskupa i Męczennika.
+									Uroczystość zaślubin odbędzie się w kościele pw. św. Stanisława Biskupa i Męczennika w Rzgowie.
 								</p>
-								<p class="text-[0.85rem] text-muted mb-3">plac 500-lecia 7, 95-030 Rzgów</p>
+								<p class="text-[0.85rem] text-ink font-semibold mb-3">plac 500-lecia 7, 95-030 Rzgów</p>
 								<a
 									href="https://maps.app.goo.gl/JDEQHt8ndkDJzqV86"
 									target="_blank"
@@ -76,7 +78,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 									Po ceremonii zapraszamy na przyjęcie weselne do restauracji
 									Eden Hotel i Restauracja. Pierwszy budynek po wjeździe za bramę kompleksu.
 								</p>
-								<p class="text-[0.85rem] text-muted mb-3">ul. Letniskowa 11/13, 95-030 Rzgów</p>
+								<p class="text-[0.85rem] text-ink font-semibold mb-3">ul. Letniskowa 11/13, 95-030 Rzgów</p>
 								<a
 									href="https://maps.app.goo.gl/qbXYjmw8guHNjPAKA"
 									target="_blank"
@@ -115,14 +117,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<div class="max-w-2xl mx-auto">
 					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2 reveal">Nocleg</p>
 					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-10 reveal">
-						Pokój dla gości
+						Nocleg dla gości
 					</h2>
 					<div class="flex items-center gap-10 max-md:flex-col max-md:gap-6 reveal">
 						<div class="flex-1">
 							<p class="text-[0.95rem] text-muted leading-relaxed">
-								Dla każdej pary gości przyjezdnych zarezerwowaliśmy pokój w hotelu.
-								Budynek hotelu znajduje się za salą weselną wewnątrz kompleksu.
-								W recepcji wystarczy powiedzieć, że jest się naszym gościem weselnym.
+								Dla każdego gościa przyjezdnego zarezerwowany jest pokój w hotelu.<br />
+								Budynek hotelu znajduje się za salą weselną wewnątrz kompleksu. <br />
+								W recepcji wystarczy podać hasło "Wesele Agaty i Maćka" <br />
+								Zameldowanie od 14:00 <br />
+								Śniadanie: od 7:00 do 11:00 <br />
 							</p>
 						</div>
 						<img
@@ -143,7 +147,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					<p class="text-[0.95rem] text-muted mb-8 reveal">Źródło do zdjęć z wesela udostępnimy tutaj.</p>
 					<div class="reveal">
 						<img
-							class="w-full rounded-2xl shadow-sm"
+							class="max-w-[210px] mx-auto rounded-2xl shadow-sm"
 							src={`${import.meta.env.BASE_URL}/tomy.jpeg`}
 							alt="Zdjęcia z wesela"
 						/>
@@ -185,9 +189,31 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				</div>
 			</section>
 
+			<section id="wspomnienia" class="py-20 px-6">
+				<div class="max-w-4xl mx-auto">
+					<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+						<img
+							class="w-full aspect-[4/5] object-cover rounded-2xl shadow-sm transition-transform duration-300 hover:scale-[1.02] reveal"
+							src={`${import.meta.env.BASE_URL}/1.jpg`}
+							alt="Wspomnienie 1"
+						/>
+						<img
+							class="w-full aspect-[4/5] object-cover rounded-2xl shadow-sm transition-transform duration-300 hover:scale-[1.02] reveal"
+							src={`${import.meta.env.BASE_URL}/3.jpg`}
+							alt="Wspomnienie 2"
+						/>
+						<img
+							class="w-full aspect-[4/5] object-cover rounded-2xl shadow-sm transition-transform duration-300 hover:scale-[1.02] reveal"
+							src={`${import.meta.env.BASE_URL}/2.jpg`}
+							alt="Wspomnienie 3"
+						/>
+					</div>
+				</div>
+			</section>
+
 			<section class="py-20 px-6 text-center border-t border-border-light">
 				<div class="max-w-xl mx-auto reveal">
-					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2">Odliczanie</p>
+					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2"></p>
 					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-8">
 						Do zobaczenia już za
 					</h2>
@@ -209,7 +235,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 							<span class="text-[0.65rem] tracking-[0.14em] uppercase text-muted mt-1">sekund</span>
 						</div>
 					</div>
-					<p class="text-sm text-muted tracking-[0.06em]">Rzgów</p>
+					<p class="text-sm text-muted tracking-[0.06em]"></p>
 				</div>
 			</section>
 
