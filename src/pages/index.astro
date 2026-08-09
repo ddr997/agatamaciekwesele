@@ -62,6 +62,7 @@ const BANNER_MOBILE = asset('banner_mobile.jpg');
 							<div class="min-w-0">
 								<p class="text-[0.7rem] font-normal tracking-[0.15em] uppercase text-brand mb-1">Ceremonia</p>
 								<h3 class="font-serif text-2xl font-medium text-ink tracking-[0.04em] mb-2">Ślub</h3>
+								<p class="font-semibold text-ink mb-2">16:30</p>
 								<p class="text-sm text-muted leading-relaxed text-justify mb-2">
 									Uroczystość zaślubin odbędzie się w kościele pw. św. Stanisława Biskupa i Męczennika w Rzgowie.
 								</p>
@@ -332,7 +333,7 @@ const BANNER_MOBILE = asset('banner_mobile.jpg');
 		once: true,
 	});
 
-	const target = new Date("2026-08-28T00:00:00+02:00").getTime();
+	const target = new Date("2026-08-28T16:30:00+02:00").getTime();
 
 	function updateCountdown() {
 		const now = Date.now();
