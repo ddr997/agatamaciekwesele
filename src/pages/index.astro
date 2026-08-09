@@ -2,6 +2,9 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const BANNER = import.meta.env.BASE_URL + '/baner.jpg';
+const BANNER_MOBILE = import.meta.env.BASE_URL + '/baner_mobile.jpg';
 ---
 
 <!doctype html>
@@ -15,7 +18,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<main>
 			<section
 				class="relative flex items-center justify-center min-h-screen pt-14 pb-16 px-6 text-center bg-cover bg-center bg-no-repeat hero-banner"
-				style={`background-image: url(${import.meta.env.BASE_URL}/baner.jpg)`}
+				style={{
+					"--banner": `url(${BANNER})`,
+					"--banner-mobile": `url(${BANNER_MOBILE})`,
+					backgroundImage: "var(--banner)",
+				}}
 			>
 				<div class="absolute inset-0"></div>
 				<div class="max-w-xl hero-content relative">
@@ -45,7 +52,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<div class="max-w-2xl mx-auto">
 					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2 reveal"></p>
 					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-10 reveal">
-						Harmonogram Dnia Ślubu
+						Szczegóły Uroczystości
 					</h2>
 
 					<div class="flex flex-col gap-6">
@@ -95,8 +102,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 			<section id="miejsca" class="py-20 px-6">
 				<div class="max-w-2xl mx-auto reveal">
+					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2 reveal">Dojazd</p>
 					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-8">
-						Jak dojechać
+						Dojazd i parking
 					</h2>
 					<figure class="m-0">
 						<a href="https://maps.app.goo.gl/vPmQJ3B6mfPu1Jsm8" target="_blank" rel="noopener noreferrer" class="block">
@@ -155,6 +163,29 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				</div>
 			</section>
 
+			<section id="zdjecia" class="py-20 px-6">
+				<div class="max-w-2xl mx-auto">
+					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-4 reveal">
+						Podziel się zdjęciami z wesela
+					</h2>
+					<p class="text-[0.95rem] text-muted leading-relaxed max-w-md mb-8 reveal">
+						Jeśli zrobicie zdjęcia lub nagrania podczas wesela, będzie nam bardzo miło,
+						jeśli wrzucicie je na wspólny dysk. <br />
+						Chętnie zobaczymy ten dzień Waszymi oczami.
+					</p>
+					<div class="reveal">
+						<a
+							href="https://photos.app.goo.gl/WrC3HMZkNRXhEMAR9"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-block font-medium text-sm tracking-[0.08em] uppercase no-underline text-white bg-brand-dark rounded-full px-8 py-3 transition-all duration-200 hover:bg-brand"
+						>
+							Dodaj zdjęcia na dysk
+						</a>
+					</div>
+				</div>
+			</section>
+
 			<section id="kontakt" class="py-20 px-6">
 				<div class="max-w-2xl mx-auto">
 					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2 reveal">Kontakt</p>
@@ -162,9 +193,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						Masz pytania?
 					</h2>
 					<p class="text-[0.95rem] text-muted mb-10 reveal">
-						W razie czegokolwiek — dzwońcie śmiało do nas lub do świadków.
+						W razie jakichkolwiek pytań — śmiało dzwońcie do nas lub do naszych świadków.
 					</p>
-					<div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4">
+					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:max-w-md sm:mx-auto">
 						<a href="tel:+48668287198" class="flex flex-col items-center gap-0.5 bg-card border border-border rounded-2xl p-6 no-underline text-ink transition-all duration-200 hover:border-brand hover:-translate-y-1 reveal">
 							<span class="font-serif text-2xl font-medium tracking-[0.04em]">Agata</span>
 							<span class="text-[0.65rem] font-normal tracking-[0.14em] uppercase text-brand mb-2">Panna młoda</span>
@@ -253,7 +284,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	}
 	@media (max-width: 720px) {
 		.hero-banner {
-			background-size: contain;
+			background-image: var(--banner-mobile);
+			background-size: cover;
 		}
 	}
 </style>
