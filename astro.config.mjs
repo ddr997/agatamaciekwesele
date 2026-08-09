@@ -6,7 +6,8 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://agataimaciek.qd.je",
+	site: "https://ddr997.github.io",
+	base: '/agatamaciekwesele',
 	server: {
 		port: 3000,
 	},
