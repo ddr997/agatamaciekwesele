@@ -3,8 +3,9 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
-const BANNER = import.meta.env.BASE_URL + '/baner.jpg';
-const BANNER_MOBILE = import.meta.env.BASE_URL + '/baner_mobile.jpg';
+const asset = (path: string) => import.meta.env.BASE_URL + path;
+const BANNER = asset('baner.jpg');
+const BANNER_MOBILE = asset('baner_mobile.jpg');
 ---
 
 <!doctype html>
@@ -110,7 +111,7 @@ const BANNER_MOBILE = import.meta.env.BASE_URL + '/baner_mobile.jpg';
 						<a href="https://maps.app.goo.gl/vPmQJ3B6mfPu1Jsm8" target="_blank" rel="noopener noreferrer" class="block">
 							<img
 								class="w-full rounded-2xl shadow-sm transition-transform duration-300 hover:scale-[1.01]"
-								src={`${import.meta.env.BASE_URL}/MAPA.png`}
+								src={asset("MAPA.png")}
 								alt="Mapa dojazdu na wesele"
 							/>
 						</a>
@@ -139,7 +140,7 @@ const BANNER_MOBILE = import.meta.env.BASE_URL + '/baner_mobile.jpg';
 						</div>
 						<img
 							class="w-[42%] max-md:w-full rounded-2xl shadow-sm"
-							src={`${import.meta.env.BASE_URL}/HOTEL.png`}
+							src={asset("HOTEL.png")}
 							alt="Hotel"
 						/>
 					</div>
@@ -156,7 +157,7 @@ const BANNER_MOBILE = import.meta.env.BASE_URL + '/baner_mobile.jpg';
 					<div class="reveal">
 						<img
 							class="max-w-[210px] mx-auto rounded-2xl shadow-sm"
-							src={`${import.meta.env.BASE_URL}/tomy.jpeg`}
+							src={asset("tomy.jpeg")}
 							alt="Zdjęcia z wesela"
 						/>
 					</div>
@@ -225,17 +226,17 @@ const BANNER_MOBILE = import.meta.env.BASE_URL + '/baner_mobile.jpg';
 					<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
 						<img
 							class="w-full aspect-[4/5] object-cover rounded-2xl shadow-sm transition-transform duration-300 hover:scale-[1.02] reveal"
-							src={`${import.meta.env.BASE_URL}/1.jpg`}
+							src={asset("1.jpg")}
 							alt="Wspomnienie 1"
 						/>
 						<img
 							class="w-full aspect-[4/5] object-cover rounded-2xl shadow-sm transition-transform duration-300 hover:scale-[1.02] reveal"
-							src={`${import.meta.env.BASE_URL}/3.jpg`}
+							src={asset("3.jpg")}
 							alt="Wspomnienie 2"
 						/>
 						<img
 							class="w-full aspect-[4/5] object-cover rounded-2xl shadow-sm transition-transform duration-300 hover:scale-[1.02] reveal"
-							src={`${import.meta.env.BASE_URL}/2.jpg`}
+							src={asset("2.jpg")}
 							alt="Wspomnienie 3"
 						/>
 					</div>
