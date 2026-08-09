@@ -5,7 +5,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 const asset = (path: string) => import.meta.env.BASE_URL + path;
 const BANNER = asset('baner.jpg');
-const BANNER_MOBILE = asset('baner_mobile.jpg');
+const BANNER_MOBILE = asset('banner_mobile.jpg');
 ---
 
 <!doctype html>
@@ -34,7 +34,7 @@ const BANNER_MOBILE = asset('baner_mobile.jpg');
 						Agata <span class="italic text-brand">&amp;</span> Maciek
 					</h1>
 					<p class="text-[0.95em] text-ink/80 leading-relaxed max-w-md mx-auto mb-8 font-light hero-line">
-					Z ogromną radością zapraszamy na nasz ślub
+					Z radością zapraszamy na nasz ślub
 					</p>
 					<div class="font-serif text-2xl font-medium text-ink tracking-[0.1em] uppercase hero-line">
 						<span>piątek</span>
@@ -62,7 +62,7 @@ const BANNER_MOBILE = asset('baner_mobile.jpg');
 							<div class="min-w-0">
 								<p class="text-[0.7rem] font-normal tracking-[0.15em] uppercase text-brand mb-1">Ceremonia</p>
 								<h3 class="font-serif text-2xl font-medium text-ink tracking-[0.04em] mb-2">Ślub</h3>
-								<p class="text-sm text-muted leading-relaxed mb-2">
+								<p class="text-sm text-muted leading-relaxed text-justify mb-2">
 									Uroczystość zaślubin odbędzie się w kościele pw. św. Stanisława Biskupa i Męczennika w Rzgowie.
 								</p>
 								<p class="text-[0.85rem] text-ink font-semibold mb-3">plac 500-lecia 7, 95-030 Rzgów</p>
@@ -82,9 +82,9 @@ const BANNER_MOBILE = asset('baner_mobile.jpg');
 							<div class="min-w-0">
 								<p class="text-[0.7rem] font-normal tracking-[0.15em] uppercase text-brand mb-1">Przyjęcie</p>
 								<h3 class="font-serif text-2xl font-medium text-ink tracking-[0.04em] mb-2">Wesele</h3>
-								<p class="text-sm text-muted leading-relaxed mb-2">
-									Po ceremonii zapraszamy na przyjęcie weselne do restauracji
-									Eden Hotel i Restauracja. Pierwszy budynek po wjeździe za bramę kompleksu.
+								<p class="text-sm text-muted leading-relaxed text-justify mb-2">
+									Po ceremonii zapraszamy na przyjęcie weselne do restauracji Eden Hotel i Restauracja.
+									Restauracja znajduje się w pierwszym budynku po wjeździe za bramę kompleksu.
 								</p>
 								<p class="text-[0.85rem] text-ink font-semibold mb-3">ul. Letniskowa 11/13, 95-030 Rzgów</p>
 								<a
@@ -130,12 +130,12 @@ const BANNER_MOBILE = asset('baner_mobile.jpg');
 					</h2>
 					<div class="flex items-center gap-10 max-md:flex-col max-md:gap-6 reveal">
 						<div class="flex-1">
-							<p class="text-[0.95rem] text-muted leading-relaxed">
-								Dla każdego gościa przyjezdnego zarezerwowany jest pokój w hotelu.<br />
-								Budynek hotelu znajduje się za salą weselną wewnątrz kompleksu. <br />
-								W recepcji wystarczy podać hasło "Wesele Agaty i Maćka" <br />
-								Zameldowanie od 14:00 <br />
-								Śniadanie: od 7:00 do 11:00 <br />
+							<p class="text-[0.95rem] text-muted leading-relaxed text-justify">
+								Dla naszych przyjezdnych gości zapewniliśmy nocleg w hotelu.
+								Hotel znajduje się za salą weselną, wewnątrz kompleksu.
+								W recepcji wystarczy podać hasło: „Wesele Agaty i Maćka”. </br>
+								Zameldowanie: od 14:00 </br>
+								Śniadanie: 7:00–11:00
 							</p>
 						</div>
 						<img
@@ -147,13 +147,23 @@ const BANNER_MOBILE = asset('baner_mobile.jpg');
 				</div>
 			</section>
 
-			<section id="galeria" class="py-20 px-6">
+			<section id="Zdjęcia" class="py-20 px-6">
 				<div class="max-w-2xl mx-auto">
-					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2 reveal">Galeria</p>
+					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2 reveal">Zdjęcia</p>
 					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-6 reveal">
-						Zdjęcia
+						Galeria
 					</h2>
-					<p class="text-[0.95rem] text-muted mb-8 reveal">Źródło do zdjęć z wesela udostępnimy tutaj.</p>
+					<p class="text-[0.95rem] text-muted mb-8 reveal"> Tutaj znajdziecie galerię zdjęć wykonanych przez naszego fotografa.</p>
+					<div class="reveal mb-8">
+						<a
+							href="https://youtu.be/dQw4w9WgXcQ?si=3H3A39d4foFiM0Y3"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-block font-medium text-sm tracking-[0.08em] uppercase no-underline text-white bg-brand-dark rounded-full px-8 py-3 transition-all duration-200 hover:bg-brand"
+						>
+							Zobacz galerię
+						</a>
+					</div>
 					<div class="reveal">
 						<img
 							class="max-w-[210px] mx-auto rounded-2xl shadow-sm"
@@ -166,13 +176,11 @@ const BANNER_MOBILE = asset('baner_mobile.jpg');
 
 			<section id="zdjecia" class="py-20 px-6">
 				<div class="max-w-2xl mx-auto">
-					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-4 reveal">
+					<h2 class="font-serif text-[clamp(1.6rem,4.5vw,2.6rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-4 reveal">
 						Podziel się zdjęciami z wesela
 					</h2>
-					<p class="text-[0.95rem] text-muted leading-relaxed max-w-md mb-8 reveal">
-						Jeśli zrobicie zdjęcia lub nagrania podczas wesela, będzie nam bardzo miło,
-						jeśli wrzucicie je na wspólny dysk. <br />
-						Chętnie zobaczymy ten dzień Waszymi oczami.
+					<p class="text-[0.95rem] text-muted leading-relaxed mb-8 reveal">
+						Jeśli zrobicie zdjęcia lub nagrania podczas wesela, będzie nam bardzo miło, jeśli wrzucicie je na wspólny dysk. Chętnie zobaczymy ten dzień Waszymi oczami!
 					</p>
 					<div class="reveal">
 						<a
