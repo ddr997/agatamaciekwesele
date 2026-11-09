@@ -1,6 +1,5 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 const asset = (path: string) => import.meta.env.BASE_URL + path;
@@ -14,8 +13,6 @@ const BANNER_MOBILE = asset('banner_mobile.jpg');
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
-		<Header />
-
 		<main>
 			<section
 				class="relative flex items-center justify-center min-h-screen pt-14 pb-16 px-6 text-center bg-cover bg-center bg-no-repeat hero-banner"
@@ -46,246 +43,32 @@ const BANNER_MOBILE = asset('banner_mobile.jpg');
 						<span>2026</span>
 					</div>
 					<p class="text-sm text-muted mt-3 tracking-[0.06em] hero-line">Rzgów</p>
-				</div>
-			</section>
 
-			<section id="plan" class="py-20 px-6">
-				<div class="max-w-2xl mx-auto">
-					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2 reveal"></p>
-					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-10 reveal">
-						Szczegóły Uroczystości
-					</h2>
-
-					<div class="flex flex-col gap-6">
-						<article class="flex gap-6 bg-card border border-border rounded-2xl p-7 transition-colors duration-200 hover:border-brand reveal">
-							<span class="font-serif text-[2.2rem] font-light text-brand leading-none shrink-0">01</span>
-							<div class="min-w-0">
-								<p class="text-[0.7rem] font-normal tracking-[0.15em] uppercase text-brand mb-1">Ceremonia</p>
-								<h3 class="font-serif text-2xl font-medium text-ink tracking-[0.04em] mb-2">Ślub</h3>
-								<p class="font-semibold text-ink mb-2">16:30</p>
-								<p class="text-sm text-muted leading-relaxed text-justify mb-2">
-									Uroczystość zaślubin odbędzie się w kościele pw. św. Stanisława Biskupa i Męczennika w Rzgowie.
-								</p>
-								<p class="text-[0.85rem] text-ink font-semibold mb-3">plac 500-lecia 7, 95-030 Rzgów</p>
-								<a
-									href="https://maps.app.goo.gl/JDEQHt8ndkDJzqV86"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="inline-block text-[0.7rem] font-medium tracking-[0.1em] uppercase no-underline text-brand-dark border border-border rounded-full px-5 py-1.5 transition-all duration-200 hover:bg-brand-dark hover:text-white hover:border-brand-dark"
-								>
-									pokaż na mapie
-								</a>
-							</div>
-						</article>
-
-						<article class="flex gap-6 bg-card border border-border rounded-2xl p-7 transition-colors duration-200 hover:border-brand reveal">
-							<span class="font-serif text-[2.2rem] font-light text-brand leading-none shrink-0">02</span>
-							<div class="min-w-0">
-								<p class="text-[0.7rem] font-normal tracking-[0.15em] uppercase text-brand mb-1">Przyjęcie</p>
-								<h3 class="font-serif text-2xl font-medium text-ink tracking-[0.04em] mb-2">Wesele</h3>
-								<p class="text-sm text-muted leading-relaxed text-justify mb-2">
-									Po ceremonii zapraszamy na przyjęcie weselne do restauracji Eden Hotel i Restauracja.
-									Restauracja znajduje się w pierwszym budynku po wjeździe za bramę kompleksu.
-								</p>
-								<p class="text-[0.85rem] text-ink font-semibold mb-3">ul. Letniskowa 11/13, 95-030 Rzgów</p>
-								<a
-									href="https://maps.app.goo.gl/qbXYjmw8guHNjPAKA"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="inline-block text-[0.7rem] font-medium tracking-[0.1em] uppercase no-underline text-brand-dark border border-border rounded-full px-5 py-1.5 transition-all duration-200 hover:bg-brand-dark hover:text-white hover:border-brand-dark"
-								>
-									pokaż na mapie
-								</a>
-							</div>
-						</article>
-					</div>
-				</div>
-			</section>
-
-			<section id="miejsca" class="py-20 px-6">
-				<div class="max-w-2xl mx-auto reveal">
-					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2 reveal">Dojazd</p>
-					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-8">
-						Dojazd i parking
-					</h2>
-					<figure class="m-0">
-						<a href="https://maps.app.goo.gl/vPmQJ3B6mfPu1Jsm8" target="_blank" rel="noopener noreferrer" class="block">
-							<img
-								class="w-full rounded-2xl shadow-sm transition-transform duration-300 hover:scale-[1.01]"
-								src={asset("MAPA.png")}
-								alt="Mapa dojazdu na wesele"
-							/>
-						</a>
-						<figcaption class="mt-2 text-xs text-muted italic text-center">
-							Kliknij, aby otworzyć trasę w Mapach Google
-						</figcaption>
-					</figure>
-				</div>
-			</section>
-
-			<section id="nocleg" class="py-20 px-6">
-				<div class="max-w-2xl mx-auto">
-					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2 reveal">Nocleg</p>
-					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-10 reveal">
-						Nocleg dla gości
-					</h2>
-					<div class="flex items-center gap-10 max-md:flex-col max-md:gap-6 reveal">
-						<div class="flex-1">
-							<p class="text-[0.95rem] text-muted leading-relaxed text-justify">
-								Dla naszych przyjezdnych gości zapewniliśmy nocleg w hotelu.
-								Hotel znajduje się za salą weselną, wewnątrz kompleksu.
-								W recepcji wystarczy podać hasło: <strong>„Wesele Agaty i Maćka”</strong>. </br>
-								Zameldowanie: od 14:00 </br>
-								Śniadanie: 7:00–11:00 </br>
-								Wymeldowanie: do 12:00
-							</p>
-						</div>
-						<img
-							class="w-[42%] max-md:w-full rounded-2xl shadow-sm"
-							src={asset("HOTEL.png")}
-							alt="Hotel"
-						/>
-					</div>
-				</div>
-			</section>
-
-			<section id="Zdjęcia" class="py-20 px-6">
-				<div class="max-w-2xl mx-auto">
-					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2 reveal">Zdjęcia</p>
-					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-6 reveal">
-						Galeria
-					</h2>
-					<p class="text-[0.95rem] text-muted mb-8 reveal"> Tutaj znajdziecie galerię zdjęć wykonanych przez naszego fotografa.</p>
-					<div class="reveal mb-8">
+					<div class="flex justify-center flex-wrap gap-4 mt-10 hero-line">
 						<a
-							href="https://youtu.be/dQw4w9WgXcQ?si=3H3A39d4foFiM0Y3"
+							href="https://agatamaciek.pixieset.com/agataandmaciej-1/"
 							target="_blank"
 							rel="noopener noreferrer"
 							class="inline-block font-medium text-sm tracking-[0.08em] uppercase no-underline text-white bg-brand-dark rounded-full px-8 py-3 transition-all duration-200 hover:bg-brand"
 						>
-							Zobacz galerię
+							Galeria 1
 						</a>
-					</div>
-				</div>
-			</section>
-
-			<section id="zdjecia" class="py-20 px-6">
-				<div class="max-w-2xl mx-auto">
-					<h2 class="font-serif text-[clamp(1.6rem,4.5vw,2.6rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-4 reveal">
-						Podziel się zdjęciami z wesela
-					</h2>
-					<p class="text-[0.95rem] text-muted leading-relaxed mb-8 reveal">
-						Jeśli zrobicie zdjęcia lub nagrania podczas wesela, będzie nam bardzo miło, jeśli wrzucicie je na wspólny dysk. Chętnie zobaczymy ten dzień Waszymi oczami!
-					</p>
-					<div class="reveal">
 						<a
-							href="https://photos.app.goo.gl/WrC3HMZkNRXhEMAR9"
+							href="https://agatamaciek.pixieset.com/agataandmaciej-2/"
 							target="_blank"
 							rel="noopener noreferrer"
 							class="inline-block font-medium text-sm tracking-[0.08em] uppercase no-underline text-white bg-brand-dark rounded-full px-8 py-3 transition-all duration-200 hover:bg-brand"
 						>
-							Dodaj zdjęcia na dysk
+							Galeria 2
 						</a>
 					</div>
 				</div>
 			</section>
-
-			<section id="kontakt" class="py-20 px-6">
-				<div class="max-w-2xl mx-auto">
-					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2 reveal">Kontakt</p>
-					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-6 reveal">
-						Masz pytania?
-					</h2>
-					<p class="text-[0.95rem] text-muted mb-10 reveal">
-						W razie jakichkolwiek pytań — śmiało dzwońcie do nas lub do naszych świadków.
-					</p>
-					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:max-w-md sm:mx-auto">
-						<a href="tel:+48668287198" class="flex flex-col items-center gap-0.5 bg-card border border-border rounded-2xl p-6 no-underline text-ink transition-all duration-200 hover:border-brand hover:-translate-y-1 reveal">
-							<span class="font-serif text-2xl font-medium tracking-[0.04em]">Agata</span>
-							<span class="text-[0.65rem] font-normal tracking-[0.14em] uppercase text-brand mb-2">Panna młoda</span>
-							<span class="text-sm text-muted">+48 668 287 198</span>
-						</a>
-						<a href="tel:+48668287199" class="flex flex-col items-center gap-0.5 bg-card border border-border rounded-2xl p-6 no-underline text-ink transition-all duration-200 hover:border-brand hover:-translate-y-1 reveal">
-							<span class="font-serif text-2xl font-medium tracking-[0.04em]">Maciek</span>
-							<span class="text-[0.65rem] font-normal tracking-[0.14em] uppercase text-brand mb-2">Pan młody</span>
-							<span class="text-sm text-muted">+48 793 476 846</span>
-						</a>
-						<a href="tel:+48000000000" class="flex flex-col items-center gap-0.5 bg-card border border-border rounded-2xl p-6 no-underline text-ink transition-all duration-200 hover:border-brand hover:-translate-y-1 reveal">
-							<span class="font-serif text-2xl font-medium tracking-[0.04em]">Julia</span>
-							<span class="text-[0.65rem] font-normal tracking-[0.14em] uppercase text-brand mb-2">Świadkowa</span>
-							<span class="text-sm text-muted">+48 000 000 000</span>
-						</a>
-						<a href="tel:+48000000000" class="flex flex-col items-center gap-0.5 bg-card border border-border rounded-2xl p-6 no-underline text-ink transition-all duration-200 hover:border-brand hover:-translate-y-1 reveal">
-							<span class="font-serif text-2xl font-medium tracking-[0.04em]">Hubert</span>
-							<span class="text-[0.65rem] font-normal tracking-[0.14em] uppercase text-brand mb-2">Świadek</span>
-							<span class="text-sm text-muted">+48 000 000 000</span>
-						</a>
-					</div>
-				</div>
-			</section>
-
-			<section id="wspomnienia" class="py-20 px-6">
-				<div class="max-w-4xl mx-auto">
-					<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-						<img
-							class="w-full aspect-[4/5] object-cover rounded-2xl shadow-sm transition-transform duration-300 hover:scale-[1.02] reveal"
-							src={asset("1.jpg")}
-							alt="Wspomnienie 1"
-						/>
-						<img
-							class="w-full aspect-[4/5] object-cover rounded-2xl shadow-sm transition-transform duration-300 hover:scale-[1.02] reveal"
-							src={asset("3.jpg")}
-							alt="Wspomnienie 2"
-						/>
-						<img
-							class="w-full aspect-[4/5] object-cover rounded-2xl shadow-sm transition-transform duration-300 hover:scale-[1.02] reveal"
-							src={asset("2.jpg")}
-							alt="Wspomnienie 3"
-						/>
-					</div>
-				</div>
-			</section>
-
-			<section class="py-20 px-6 text-center border-t border-border-light">
-				<div class="max-w-xl mx-auto reveal">
-					<p class="text-[0.7rem] font-normal tracking-[0.18em] uppercase text-brand mb-2"></p>
-					<h2 class="font-serif text-[clamp(2rem,6vw,3.2rem)] font-normal text-ink tracking-[0.04em] leading-tight mb-8">
-						Do zobaczenia już za
-					</h2>
-					<div class="flex justify-center flex-wrap gap-x-8 gap-y-5 mb-6" id="countdown">
-						<div class="flex flex-col items-center min-w-[64px]">
-							<span class="font-serif text-[2.6rem] font-light text-brand leading-none" id="days">--</span>
-							<span class="text-[0.65rem] tracking-[0.14em] uppercase text-muted mt-1">dni</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[64px]">
-							<span class="font-serif text-[2.6rem] font-light text-brand leading-none" id="hours">--</span>
-							<span class="text-[0.65rem] tracking-[0.14em] uppercase text-muted mt-1">godzin</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[64px]">
-							<span class="font-serif text-[2.6rem] font-light text-brand leading-none" id="minutes">--</span>
-							<span class="text-[0.65rem] tracking-[0.14em] uppercase text-muted mt-1">minut</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[64px]">
-							<span class="font-serif text-[2.6rem] font-light text-brand leading-none" id="seconds">--</span>
-							<span class="text-[0.65rem] tracking-[0.14em] uppercase text-muted mt-1">sekund</span>
-						</div>
-					</div>
-					<p class="text-sm text-muted tracking-[0.06em]"></p>
-				</div>
-			</section>
-
-			<footer class="text-center py-12 px-6 border-t border-border-light font-serif text-base text-muted tracking-[0.05em] reveal">
-				<p>Agata &amp; Maciek · 28.08.2026</p>
-			</footer>
 		</main>
 	</body>
 </html>
 
 <style is:global>
-	.reveal {
-		opacity: 0;
-		transform: translateY(30px);
-	}
 	@media (max-width: 720px) {
 		.hero-banner {
 			background-image: var(--banner-mobile);
@@ -296,9 +79,6 @@ const BANNER_MOBILE = asset('banner_mobile.jpg');
 
 <script>
 	import gsap from "gsap";
-	import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-	gsap.registerPlugin(ScrollTrigger);
 
 	gsap.fromTo(
 		".hero-line",
@@ -312,46 +92,4 @@ const BANNER_MOBILE = asset('banner_mobile.jpg');
 			delay: 0.4,
 		}
 	);
-
-	ScrollTrigger.batch(".reveal", {
-		onEnter: (els) => {
-			gsap.to(els, {
-				opacity: 1,
-				y: 0,
-				duration: 0.8,
-				stagger: 0.08,
-				ease: "power3.out",
-			});
-		},
-		start: "top 88%",
-		once: true,
-	});
-
-	const target = new Date("2026-08-28T16:30:00+02:00").getTime();
-
-	function updateCountdown() {
-		const now = Date.now();
-		const diff = target - now;
-
-		if (diff <= 0) {
-			["days", "hours", "minutes", "seconds"].forEach((id) => {
-				const el = document.getElementById(id);
-				if (el) el.textContent = "00";
-			});
-			return;
-		}
-
-		const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-		const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-		const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-		document.getElementById("days").textContent = String(days).padStart(2, "0");
-		document.getElementById("hours").textContent = String(hours).padStart(2, "0");
-		document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
-		document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
-	}
-
-	updateCountdown();
-	setInterval(updateCountdown, 1000);
 </script>
